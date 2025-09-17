@@ -1,13 +1,7 @@
-﻿using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
-
-namespace JaddooTravel.Entities
+﻿namespace JaddooTravel.Dtos.DestinationDtos
 {
-    public class Destination
+    public class CreateDestinationDto
     {
-        [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
-        public string DestinationId { get; set; }
         public string CityCountry { get; set; }
         public string ImageUrl { get; set; }
         public decimal Price { get; set; }

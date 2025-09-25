@@ -15,7 +15,7 @@ namespace JaddooTravel.Services.FeatureServices
         {
             var client = new MongoClient(_databaseSettings.ConnectionString);
             var database = client.GetDatabase(_databaseSettings.DatabaseName);
-            _featureCollection = database.GetCollection<Feature>(_databaseSettings.DestinationCollectionName);
+            _featureCollection = database.GetCollection<Feature>(_databaseSettings.FeatureCollectionName);
             _mapper = mapper;
         }
 

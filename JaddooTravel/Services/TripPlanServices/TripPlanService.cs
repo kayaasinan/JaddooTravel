@@ -15,7 +15,7 @@ namespace JaddooTravel.Services.TripPlanServices
         {
             var client = new MongoClient(_databaseSettings.ConnectionString);
             var database = client.GetDatabase(_databaseSettings.DatabaseName);
-            _tripPlanCollection = database.GetCollection<TripPlan>(_databaseSettings.DestinationCollectionName);
+            _tripPlanCollection = database.GetCollection<TripPlan>(_databaseSettings.TripPlanCollectionName);
             _mapper = mapper;
         }
 

@@ -1,0 +1,20 @@
+﻿@model JaddooTravel.Dtos.TripPlanDtos.GetTripPlanByIdDto
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <br />
+    <form method="post">
+        <input type="hidden" asp-for="TripPlanId" />
+        <input type="text" asp-for="Title" placeholder="Başlık Giriniz" class="form-control" />
+        <br />
+        <textarea asp-for="Description" placeholder="Seyahat Planı Açıklaması Giriniz" rows="7" class="form-control"></textarea>
+        <br />
+        <input type="text" asp-for="IconUrl" placeholder="İkon Url Giriniz" class="form-control" />
+        <br />
+        <button class="btn btn-primary">Seyahat Planı Güncelle</button>
+    </form>
+</div>

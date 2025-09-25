@@ -1,5 +1,7 @@
 using JaddooTravel.Services.CategoryServices;
 using JaddooTravel.Services.DestinationServices;
+using JaddooTravel.Services.FeatureServices;
+using JaddooTravel.Services.TripPlanServices;
 using JaddooTravel.Settings;
 using Microsoft.CodeAnalysis.Options;
 using Microsoft.Extensions.Options;
@@ -11,6 +13,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IDestinationService, DestinationService>();
+builder.Services.AddScoped<IFeatureService, FeatureService>();
+builder.Services.AddScoped<ITripPlanService, TripPlanService>();
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 

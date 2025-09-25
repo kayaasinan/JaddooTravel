@@ -1,0 +1,24 @@
+﻿@model JaddooTravel.Dtos.DestinationDtos.CreateDestinationDto
+@{
+    Layout = null;
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <br />
+    <form method="post">
+        <input type="text" asp-for="CityCountry" placeholder="Şehir ve Ülke Giriniz" class="form-control" />
+        <br />
+        <input type="text" asp-for="ImageUrl" placeholder="Fotoğraf Yolu Giriniz" class="form-control" />
+        <br />
+        <input type="text" asp-for="Price" placeholder="Fiyat Giriniz" class="form-control" />
+        <br />
+        <input type="text" asp-for="DayNight" placeholder="Gün-Gece Sayısı Giriniz" class="form-control" />
+        <br />
+        <input type="text" asp-for="Capacity" placeholder="Kapasite Giriniz" class="form-control" />
+        <br />
+        <textarea asp-for="Description" placeholder="Tur Açıklaması Giriniz" rows="7" class="form-control"></textarea>
+        <br />
+        <button class="btn btn-primary">Tur Ekle</button>
+    </form>
+</div>

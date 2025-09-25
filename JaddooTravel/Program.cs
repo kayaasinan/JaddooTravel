@@ -1,6 +1,27 @@
+using JaddooTravel.Services.CategoryServices;
+using JaddooTravel.Services.DestinationServices;
+using JaddooTravel.Settings;
+using Microsoft.CodeAnalysis.Options;
+using Microsoft.Extensions.Options;
+using System.Reflection;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IDestinationService, DestinationService>();
+
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
+
+builder.Services.Configure<DatabaseSettings>(builder.Configuration.GetSection("DatabaseSettingsKey"));
+builder.Services.AddScoped<IDatabaseSettings>(sp =>
+{
+    return sp.GetRequiredService<IOptions<DatabaseSettings>>().Value;
+});
+
+
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();

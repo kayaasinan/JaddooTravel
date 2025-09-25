@@ -1,0 +1,14 @@
+﻿using JaddooTravel.Dtos.DestinationDtos;
+using JaddooTravel.Dtos.FeatureDtos;
+
+namespace JaddooTravel.Services.FeatureServices
+{
+    public interface IFeatureService
+    {
+        Task<List<ResultFeatureDto>> GetAllFeatureAsync();
+        Task CreateFeatureAsync(CreateFeatureDto createFeatureDto);
+        Task UpdateFeatureAsync(UpdateFeatureDto updateFeatureDto);
+        Task DeleteFeatureAsync(string id);
+        Task<GetFeatureByIdDto> GetFeatureByIdAsync(string id);
+    }
+}

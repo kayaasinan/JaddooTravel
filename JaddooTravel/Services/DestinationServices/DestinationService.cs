@@ -11,17 +11,17 @@ namespace JaddooTravel.Services.DestinationServices
         private readonly IMongoCollection<Destination> _destinationCollection;
         private readonly IMapper _mapper;
 
-        public DestinationService(IMapper mapper,IDatabaseSettings _databaseSettings)
+        public DestinationService(IMapper mapper, IDatabaseSettings _databaseSettings)
         {
-            var client=new MongoClient(_databaseSettings.ConnectionString);
-            var database=client.GetDatabase(_databaseSettings.DatabaseName);
-            _destinationCollection=database.GetCollection<Destination>(_databaseSettings.DestinationCollectionName);
+            var client = new MongoClient(_databaseSettings.ConnectionString);
+            var database = client.GetDatabase(_databaseSettings.DatabaseName);
+            _destinationCollection = database.GetCollection<Destination>(_databaseSettings.DestinationCollectionName);
             _mapper = mapper;
         }
 
         public async Task CreateDestinationAsync(CreateDestinationDto createDestinationDto)
         {
-            var values=_mapper.Map<Destination>(createDestinationDto);
+            var values = _mapper.Map<Destination>(createDestinationDto);
             await _destinationCollection.InsertOneAsync(values);
         }
 
@@ -45,7 +45,7 @@ namespace JaddooTravel.Services.DestinationServices
         public async Task UpdateDestinationAsync(UpdateDestinationDto updateDestinationDto)
         {
             var values = _mapper.Map<Destination>(updateDestinationDto);
-            await _destinationCollection.FindOneAndReplaceAsync(x=>x.DestinationId == updateDestinationDto.DestinationId, values);
+            await _destinationCollection.FindOneAndReplaceAsync(x => x.DestinationId == updateDestinationDto.DestinationId, values);
         }
     }
 }

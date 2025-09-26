@@ -35,9 +35,26 @@
                 </div>
             </div>
             <div class="col-lg-6 d-flex justify-content-center align-items-start">
-                @* Buraya rezervasyon işlemleri için bir tablo tasarlanacak *@
+                <form method="post" class="w-100 p-3 border rounded shadow-sm bg-light">
+                    <h4 class="mb-4 text-center">Rezervasyon Formu</h4>
+
+                    <div class="mb-3">
+                        <input type="text" id="fullName" name="FullName" class="form-control" placeholder="Adınız Soyadınız" required />
+                    </div>
+                    <div class="mb-3">
+                        <input type="tel" id="phone" name="Phone" class="form-control" placeholder="Telefon Numaranız" required />
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" id="email" name="Email" class="form-control" placeholder="Email Adresiniz" required />
+                    </div>
+                    <div class="mb-3">
+                        <textarea id="notes" name="Notes" rows="3" class="form-control" placeholder="Varsa eklemek istedikleriniz"></textarea>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-info btn-lg">Rezervasyon Yap</button>
+                    </div>
+                </form>
             </div>
         </div>
-    </div><!-- end of .container-->
-
+    </div>
 </section>

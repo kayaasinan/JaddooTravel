@@ -1,0 +1,9 @@
+﻿@model JaddooTravel.ViewModel.DemoGridViewModel
+@{
+    ViewData["Title"] = "DemoGrid";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+<h1>DemoGrid</h1>
+
+@await Component.InvokeAsync("Grid", Model.Destinations)

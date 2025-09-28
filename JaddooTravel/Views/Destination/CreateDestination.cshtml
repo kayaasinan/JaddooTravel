@@ -1,24 +1,32 @@
 ﻿@model JaddooTravel.Dtos.DestinationDtos.CreateDestinationDto
 @{
-    Layout = null;
+    ViewData["Title"] = "CreateDestination";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
 }
-<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-<div class="container">
-    <br />
-    <form method="post">
-        <input type="text" asp-for="CityCountry" placeholder="Şehir ve Ülke Giriniz" class="form-control" />
-        <br />
-        <input type="text" asp-for="ImageUrl" placeholder="Fotoğraf Yolu Giriniz" class="form-control" />
-        <br />
-        <input type="text" asp-for="Price" placeholder="Fiyat Giriniz" class="form-control" />
-        <br />
-        <input type="text" asp-for="DayNight" placeholder="Gün-Gece Sayısı Giriniz" class="form-control" />
-        <br />
-        <input type="text" asp-for="Capacity" placeholder="Kapasite Giriniz" class="form-control" />
-        <br />
-        <textarea asp-for="Description" placeholder="Tur Açıklaması Giriniz" rows="7" class="form-control"></textarea>
-        <br />
-        <button class="btn btn-primary">Tur Ekle</button>
-    </form>
+<div class="row">
+    <div class="col-lg-12 d-flex align-items-stretch">
+        <div class="card w-100">
+            <div class="card-body p-4">
+                <div class="d-flex mb-4 justify-content-between align-items-center">
+                    <h5 class="mb-0 fw-bold">Rotalar</h5>
+                </div>
+                <form method="post">
+                    <input type="text" asp-for="CityCountry" placeholder="Şehir ve Ülke Giriniz" class="form-control" />
+                    <br />
+                    <input type="text" asp-for="ImageUrl" placeholder="Fotoğraf Yolu Giriniz" class="form-control" />
+                    <br />
+                    <input type="text" asp-for="Price" placeholder="Fiyat Giriniz" class="form-control" />
+                    <br />
+                    <input type="text" asp-for="DayNight" placeholder="Gün-Gece Sayısı Giriniz" class="form-control" />
+                    <br />
+                    <input type="text" asp-for="Capacity" placeholder="Kapasite Giriniz" class="form-control" />
+                    <br />
+                    <textarea asp-for="Description" placeholder="Tur Açıklaması Giriniz" rows="7" class="form-control"></textarea>
+                    <br />
+                    <button class="btn btn-primary">Tur Ekle</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>

@@ -15,7 +15,7 @@ namespace JaddooTravel.ViewComponents.Default_Index
 
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            var values = await _destinationService.GetAllDestinationAsync();
+            var values = (await _destinationService.GetAllDestinationAsync()).OrderByDescending(x=>x.DestinationId).Take(3).ToList();
             return View(values);
         }
     }

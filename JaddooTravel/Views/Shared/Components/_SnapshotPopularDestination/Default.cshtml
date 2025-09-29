@@ -1,0 +1,27 @@
+﻿@model List<ResultDestinationDto>
+@*
+    Snapshot Destination
+*@
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-6 col-xl-3">
+            <div class="card overflow-hidden">
+                <div class="position-relative">
+                    <a href="javascript:void(0)">
+                        <img src="@item.ImageUrl"
+                             class="card-img-top rounded-0" alt="...">
+                    </a>
+                </div>
+                <div class="card-body pt-3 p-4">
+                    <h6 class="fw-semibold fs-4">@item.CityCountry</h6>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h6 class="fw-semibold fs-4 mb-0">
+                            @item.Price <span class="ms-2 fw-normal text-muted fs-3"><del>@(item.Price + 7000)</del></span>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

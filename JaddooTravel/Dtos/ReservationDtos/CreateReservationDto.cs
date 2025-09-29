@@ -1,4 +1,7 @@
-﻿namespace JaddooTravel.Dtos.ReservationDtos
+﻿using JaddooTravel.Dtos.DestinationDtos;
+using Microsoft.AspNetCore.Mvc.Rendering;
+
+namespace JaddooTravel.Dtos.ReservationDtos
 {
     public class CreateReservationDto
     {
@@ -7,5 +10,6 @@
         public string Email { get; set; }
         public string Notes { get; set; }
         public string DestinationId { get; set; }
+        public List<ResultDestinationDto> DestinationList { get; set; }
     }
 }

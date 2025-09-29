@@ -3,15 +3,14 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace JaddooTravel.Entities
 {
-    public class TripPlan
+    public class Testimonial
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string TripPlanId { get; set; }
+        public string TestimonialId { get; set; }
+        public string FullName { get; set; }
         public string Title { get; set; }
-        public string Description { get; set; }
-        public string IconUrl { get; set; }
-        public string BackgroundColorClass { get; set; }
-
+        public string ProfileImageUrl { get; set; }
+        public string Notes { get; set; }
     }
 }

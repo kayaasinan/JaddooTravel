@@ -27,7 +27,7 @@ namespace JaddooTravel.Services.ReservationServices
 
         public async Task DeleteReservationAsync(string id)
         {
-            await _reservationCollection.DeleteOneAsync(r => r.Id == id);
+            await _reservationCollection.DeleteOneAsync(r => r.ReservationId == id);
         }
 
         public async Task<List<ResultReservationDto>> GetAllReservationAsync()
@@ -38,14 +38,14 @@ namespace JaddooTravel.Services.ReservationServices
 
         public async Task<GetReservationByIdDto> GetReservationByIdAsync(string id)
         {
-            var reservation = await _reservationCollection.Find(r => r.Id == id).FirstOrDefaultAsync();
+            var reservation = await _reservationCollection.Find(r => r.ReservationId == id).FirstOrDefaultAsync();
             return _mapper.Map<GetReservationByIdDto>(reservation);
         }
 
         public async Task UpdateReservationAsync(UpdateReservationDto updateReservationDto)
         {
             var updated = _mapper.Map<Reservation>(updateReservationDto);
-            await _reservationCollection.FindOneAndReplaceAsync(r => r.Id == updateReservationDto.Id, updated);
+            await _reservationCollection.FindOneAndReplaceAsync(r => r.ReservationId == updateReservationDto.ReservationId, updated);
         }
     }
 }

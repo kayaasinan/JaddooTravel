@@ -2,6 +2,8 @@
 using JaddooTravel.Dtos.CategoryDtos;
 using JaddooTravel.Dtos.DestinationDtos;
 using JaddooTravel.Dtos.FeatureDtos;
+using JaddooTravel.Dtos.ReservationDtos;
+using JaddooTravel.Dtos.TestimonialDtos;
 using JaddooTravel.Dtos.TripPlanDtos;
 using JaddooTravel.Entities;
 
@@ -33,6 +35,17 @@ namespace JaddooTravel.Mapping
             CreateMap<TripPlan,CreateTripPlanDto>().ReverseMap();
             CreateMap<TripPlan,UpdateTripPlanDto>().ReverseMap();
             CreateMap<TripPlan,GetTripPlanByIdDto>().ReverseMap();
+
+
+            CreateMap<Reservation,GetReservationByIdDto>().ReverseMap();
+            CreateMap<Reservation,CreateReservationDto>().ReverseMap();
+            CreateMap<Reservation,UpdateReservationDto>().ReverseMap();
+            CreateMap<Reservation,ResultReservationDto>().ReverseMap();
+
+            CreateMap<Testimonial, GetTestimonialByIdDto>().ReverseMap();
+            CreateMap<Testimonial, CreateTestimonialDto>().ReverseMap();
+            CreateMap<Testimonial, UpdateTestimonialDto>().ReverseMap();
+            CreateMap<Testimonial, ResultTestimonialDto>().ReverseMap();
 
 
 

@@ -53,14 +53,14 @@ Proje hem **müşteri tarafı (rezervasyon, AI asistanı, çoklu dil desteği)**
 **🛎️ Rezervasyon**  
 ![Reservation](https://github.com/kayaasinan/JaddooTravel/blob/master/JaddooTravel/imagesJadoo/Reservation.png?raw=true)
 
-**💬 Referanslar**  
-![Testimonial](https://github.com/kayaasinan/JaddooTravel/blob/master/JaddooTravel/imagesJadoo/Testimonial2.png?raw=true)
-
 **🤖 AI Asistan Sayfası**  
 ![AIPage](https://github.com/kayaasinan/JaddooTravel/blob/master/JaddooTravel/imagesJadoo/AIPage.png?raw=true)
 
 **✨ AI Sonuç Popup**  
 ![AIResult](https://github.com/kayaasinan/JaddooTravel/blob/master/JaddooTravel/imagesJadoo/AIResult.png?raw=true)
+
+**💬 Referanslar**  
+![Testimonial](https://github.com/kayaasinan/JaddooTravel/blob/master/JaddooTravel/imagesJadoo/Testimonial2.png?raw=true)
 
 **📊 Admin Dashboard**  
 ![Dashboard](https://github.com/kayaasinan/JaddooTravel/blob/master/JaddooTravel/imagesJadoo/Dashboard.png?raw=true)

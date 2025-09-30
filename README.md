@@ -34,5 +34,71 @@ Proje hem **müşteri tarafı (rezervasyon, AI asistanı, çoklu dil desteği)**
 - **Snapshot Chart Component** ile 3 dinamik gösterge:
   - 📍 Şehir & Kapasite (Bar Chart)  
   - 💰 Şehir & Fiyat Dağılımı (Donut Chart)  
-  - 📊 Toplam Ciro (KPI Kartı)  
+  - 📊 Toplam Ciro (KPI Kartı)
+
+ ---
+
+## 📷 Ekran Görüntüleri
+
+**🏠 Ana Sayfa** 
+
+![HomePage](https://github.com/kayaasinan/JaddooTravel/blob/master/JaddooTravel/imagesJadoo/HomePage.png?raw=true) 
+
+**🛠️ Servisler**  
+![Services](https://github.com/kayaasinan/JaddooTravel/blob/master/JaddooTravel/imagesJadoo/Services.png?raw=true)
+
+**🗺️ Rotalar**  
+![Destination](https://github.com/kayaasinan/JaddooTravel/blob/master/JaddooTravel/imagesJadoo/Destination.png?raw=true)
+
+**🛎️ Rezervasyon**  
+![Reservation](https://github.com/kayaasinan/JaddooTravel/blob/master/JaddooTravel/imagesJadoo/Reservation.png?raw=true)
+
+**💬 Referanslar**  
+![Testimonial](https://github.com/kayaasinan/JaddooTravel/blob/master/JaddooTravel/imagesJadoo/Testimonial2.png?raw=true)
+
+**🤖 AI Asistan Sayfası**  
+![AIPage](https://github.com/kayaasinan/JaddooTravel/blob/master/JaddooTravel/imagesJadoo/AIPage.png?raw=true)
+
+**✨ AI Sonuç Popup**  
+![AIResult](https://github.com/kayaasinan/JaddooTravel/blob/master/JaddooTravel/imagesJadoo/AIResult.png?raw=true)
+
+**📊 Admin Dashboard**  
+![Dashboard](https://github.com/kayaasinan/JaddooTravel/blob/master/JaddooTravel/imagesJadoo/Dashboard.png?raw=true)
+
+**📑 Admin Rezervasyonlar**  
+![AdminRes](https://github.com/kayaasinan/JaddooTravel/blob/master/JaddooTravel/imagesJadoo/AdminRes.png?raw=true)
+
+**💬 Admin Referans**  
+![AdminRes](https://github.com/kayaasinan/JaddooTravel/blob/master/JaddooTravel/imagesJadoo/Testimonial.png?raw=true)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

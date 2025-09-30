@@ -1,4 +1,4 @@
-﻿@model JaddooTravel.Dtos.CategoryDtos.CreateCategoryDto
+﻿@model CreateCategoryDto
 @{
     ViewData["Title"] = "CreateCategory";
     Layout = "~/Views/AdminLayout/Layout.cshtml";
@@ -12,7 +12,6 @@
                     <h5 class="mb-0 fw-bold">Kategoriler</h5>
 
                 </div>
-
                 <form method="post">
                     <input type="text" asp-for="CategoryName" placeholder="Kategori Adını Giriniz" class="form-control" />
                     <br />

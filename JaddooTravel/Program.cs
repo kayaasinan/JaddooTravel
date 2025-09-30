@@ -1,15 +1,16 @@
 using JaddooTravel.Services.CategoryServices;
 using JaddooTravel.Services.DestinationServices;
 using JaddooTravel.Services.FeatureServices;
+using JaddooTravel.Services.OpenAIServices;
 using JaddooTravel.Services.ReservationServices;
+using JaddooTravel.Services.TestimonialServices;
 using JaddooTravel.Services.TripPlanServices;
 using JaddooTravel.Settings;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.CodeAnalysis.Options;
 using Microsoft.Extensions.Options;
-using System.Reflection;
-using Microsoft.AspNetCore.Localization;
 using System.Globalization;
-using JaddooTravel.Services.TestimonialServices;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -35,6 +36,8 @@ builder.Services
     .AddControllersWithViews()
     .AddViewLocalization()
     .AddDataAnnotationsLocalization();
+
+builder.Services.AddHttpClient<IOpenAIService, OpenAIService>();
 
 var app = builder.Build();
 

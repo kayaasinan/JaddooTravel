@@ -14,9 +14,15 @@
             <div class="col-lg-2 col-md-4 mb-4 mb-lg-0 order-lg-1 order-md-2">
                 <h4 class="footer-heading-color fw-bold font-sans-serif mb-3 mb-lg-4">Kurumsal</h4>
                 <ul class="list-unstyled mb-0">
-                    <li class="mb-2"><a class="link-900 fs-1 fw-medium text-decoration-none" href="#!">Hakkımızda</a></li>
-                    <li class="mb-2"><a class="link-900 fs-1 fw-medium text-decoration-none" href="#!">Vizyon</a></li>
-                    <li class="mb-2"><a class="link-900 fs-1 fw-medium text-decoration-none" href="#!">Misyon</a></li>
+                    <li class="mb-2">
+                        <a class="link-900 fs-1 fw-medium text-decoration-none" href="#" data-bs-toggle="modal" data-bs-target="#aboutModal">Hakkımızda</a>
+                    </li>
+                    <li class="mb-2">
+                        <a class="link-900 fs-1 fw-medium text-decoration-none" href="#" data-bs-toggle="modal" data-bs-target="#visionModal">Vizyon</a>
+                    </li>
+                    <li class="mb-2">
+                        <a class="link-900 fs-1 fw-medium text-decoration-none" href="#" data-bs-toggle="modal" data-bs-target="#missionModal">Misyon</a>
+                    </li>
                 </ul>
             </div>
             <div class="col-lg-2 col-md-4 mb-4 mb-lg-0 order-lg-2 order-md-3">
@@ -36,11 +42,6 @@
                 </ul>
             </div>
             <div class="col-lg-3 col-md-5 col-12 mb-4 mb-md-6 mb-lg-0 order-lg-4 order-md-1">
-                <div class="icon-group mb-4">
-                    <a class="text-decoration-none icon-item shadow-social" id="facebook" href="#!"><i class="fab fa-facebook-f"> </i></a>
-                    <a class="text-decoration-none icon-item shadow-social" id="instagram" href="#!"><i class="fab fa-instagram"> </i></a>
-                    <a class="text-decoration-none icon-item shadow-social" id="twitter" href="#!"><i class="fab fa-twitter"> </i></a>
-                </div>
                 <h4 class="fw-medium font-sans-serif text-secondary mb-3">Uygulamamızı Keşfedin</h4>
                 <div class="d-flex align-items-center">
                     <a href="#!"> <img class="me-2" src="/public/assets/img/play-store.png" alt="play store" /></a>
@@ -48,9 +49,58 @@
                 </div>
             </div>
         </div>
-    </div><!-- end of .container-->
+    </div>
 </section>
 
 <div class="py-5 text-center">
     <p class="mb-0 text-secondary fs--1 fw-medium">Tüm hakları saklıdır@jadoo.co </p>
+</div>
+
+<div class="modal fade" id="aboutModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content p-4">
+            <div class="modal-header">
+                <h5 class="modal-title">Hakkımızda</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Biz Jadoo olarak seyahat severlere dünyanın dört bir yanındaki destinasyonları keşfetme fırsatı sunuyoruz.
+                    Amacımız, seyahati herkes için kolay, hızlı ve keyifli hale getirmektir.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="visionModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content p-4">
+            <div class="modal-header">
+                <h5 class="modal-title">Vizyonumuz</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Seyahat deneyiminde global ölçekte en güvenilir ve ilham verici platform olmak.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="missionModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content p-4">
+            <div class="modal-header">
+                <h5 class="modal-title">Misyonumuz</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Kullanıcılarımıza en uygun fiyatlarla, en iyi seyahat seçeneklerini sunarak seyahati ulaşılabilir kılmak.
+                </p>
+            </div>
+        </div>
+    </div>
 </div>

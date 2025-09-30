@@ -1,4 +1,4 @@
-﻿@model List<JaddooTravel.Dtos.DestinationDtos.ResultDestinationDto>
+﻿@model List<ResultDestinationDto>
 @{
     ViewData["Title"] = "DestinationList";
     Layout = "~/Views/AdminLayout/Layout.cshtml";
@@ -41,4 +41,10 @@
         </div>
     </div>
 </div>
-<a href="/Destination/CreateDestination" class="btn btn-info">Yeni Tur Girişi</a>
+<div class="mb-4">
+    <a href="/Destination/CreateDestination" class="btn btn-info">Yeni Tur Girişi</a>
+</div>
+
+<div>
+    @await Component.InvokeAsync("_SnapshotPopularDestination")
+</div>

@@ -1,4 +1,4 @@
-﻿@model JaddooTravel.Dtos.CategoryDtos.GetCategoryByIdDto
+﻿@model GetCategoryByIdDto
 @{
     ViewData["Title"] = "UpdateCategory";
     Layout = "~/Views/AdminLayout/Layout.cshtml";
@@ -12,7 +12,6 @@
                     <h5 class="mb-0 fw-bold">Kategori Güncelle</h5>
 
                 </div>
-
                 <form method="post">
                     <input type="hidden" asp-for="CategoryId" />
                     <input type="text" asp-for="CategoryName" placeholder="Kategori Adını Giriniz" class="form-control" />

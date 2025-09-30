@@ -1,6 +1,6 @@
-﻿@model List<ResultReservationDto>
+﻿@model List<ResultTestimonialDto>
 @{
-    ViewData["Title"] = "ReservationList";
+    ViewData["Title"] = "TestimonialList";
     Layout = "~/Views/AdminLayout/Layout.cshtml";
 }
 
@@ -9,29 +9,28 @@
         <div class="card w-100">
             <div class="card-body p-4">
                 <div class="d-flex mb-4 justify-content-between align-items-center">
-                    <h5 class="mb-0 fw-bold">Rezervasyonlar</h5>
+                    <h5 class="mb-0 fw-bold">Referanslar</h5>
                 </div>
                 <div class="table-responsive" data-simplebar>
                     <table class="table table-borderless align-middle text-nowrap">
                         <thead>
                             <tr>
+                                <th scope="col">Profil Resmi</th>
                                 <th scope="col">Ad Soyad</th>
-                                <th scope="col">Şehir/Ülke</th>
-                                <th scope="col">Telefon</th>
-                                <th scope="col">Email</th>
-                                <th scope="col">Güncelle</th>
-                                <th scope="col">Sil</th>
+                                <th scope="col">Ünvan</th>
+                                <th scope="col">Açıklama</th>
                             </tr>
                         </thead>
                         @foreach (var item in Model)
                         {
                             <tr>
+                                <td>
+                                    <img src="@item.ProfileImageUrl" class="rounded-circle" width="45" height="45" alt="profil" />
+                                </td>
                                 <td>@item.FullName</td>
-                                <td>@item.Destination?.CityCountry</td>
-                                <td>@item.Phone</td>
-                                <td>@item.Email</td>
-                                <td><a href="/Reservation/DeleteReservation/@item.ReservationId" class="btn btn-danger">Sil</a></td>
-                                <td><a href="/Reservation/UpdateReservation/@item.ReservationId" class="btn btn-success">Güncelle</a></td>
+                                <td>@item.Title</td>
+                                <td>@item.Notes.Substring(0,40)...</td>
+                                <td><a href="/Testimonial/DeleteTestimonial/@item.TestimonialId" class="btn btn-danger">Sil</a></td>
                             </tr>
                         }
                     </table>
@@ -41,7 +40,4 @@
         </div>
     </div>
 </div>
-
 @await Component.InvokeAsync("_SnapshotPopularDestination")
-
-

@@ -1,0 +1,75 @@
+﻿@*
+    Default AI Component
+*@
+<section class="pt-6">
+    <div class="container">
+        <div class="py-8 px-5 position-relative text-center shadow-lg"
+             style="background: linear-gradient(135deg, #f8f9fa 0%, #e8e2fc 100%);
+                    border-radius: 40px;">
+
+
+            <div class="position-absolute start-100 top-0 translate-middle ms-md-n3 ms-n4 mt-3">
+                <img src="/public/assets/img/cta/send.png" style="max-width:70px;" alt="send icon" />
+            </div>
+            <div class="position-absolute end-0 top-0 z-index--1">
+                <img src="/public/assets/img/cta/shape-bg2.png" width="220" alt="cta shape" />
+            </div>
+            <div class="position-absolute start-0 bottom-0 ms-3 z-index--1 d-none d-sm-block">
+                <img src="/public/assets/img/cta/shape-bg1.png" style="max-width: 280px;" alt="cta shape" />
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-9 col-md-11">
+                    <h2 class="text-dark fw-bold display-6 mb-3">
+                        🌍 Akıllı Şehir Keşif Asistanı
+                    </h2>
+                    <p class="text-secondary fs-5 mb-5">
+                        “Bir şehre yolculuk etmeden önce, <span class="fw-semibold">gezilecek en güzel 10 yeri</span> öğren!”
+                    </p>
+
+                    <!-- Form -->
+                    <form id="aiForm" class="row g-3 align-items-center w-lg-75 mx-auto bg-white p-4 rounded-4 shadow-sm">
+                        <div class="col-sm">
+                            <input class="form-control form-control-lg" type="text" name="country" placeholder="Ülke adı (örn. İtalya)" required />
+                        </div>
+                        <div class="col-sm">
+                            <input class="form-control form-control-lg" type="text" name="city" placeholder="Şehir adı (örn. Floransa)" required />
+                        </div>
+                        <div class="col-sm-auto">
+                            <button id="submitBtn" type="submit" class="btn btn-danger btn-lg px-4 rounded-pill">
+                                🚀 Oluştur
+                            </button>
+                        </div>
+                    </form>
+
+                    <p class="mt-4 text-muted fst-italic small">
+                        *Yapay zeka destekli önerilerle seyahatini kolayca planla.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<div class="modal fade" id="placesModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content p-3">
+            <div class="modal-header">
+                <h5 class="modal-title">Gezilecek Yerler</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div id="loadingSpinner" class="text-center d-none">
+                    <div class="spinner-border text-primary" role="status"></div>
+                    <p class="mt-2">Yükleniyor...</p>
+                </div>
+                <div id="placesResult"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

@@ -1,21 +1,28 @@
-﻿@model JaddooTravel.Dtos.FeatureDtos.CreateFeatureDto
+﻿@model CreateFeatureDto
 @{
-    Layout = null;
+    ViewData["Title"] = "CreateFeature";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
 }
 
-<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-<div class="container">
-    <br />
-    <form method="post">
-        <input type="text" asp-for="MainTitle" placeholder="Ana Başlık Giriniz" class="form-control" />
-        <br />
-        <input type="text" asp-for="Title" placeholder="Başlık Giriniz" class="form-control" />
-        <br />
-        <input type="text" asp-for="VideoUrl" placeholder="Video Url Giriniz" class="form-control" />
-        <br />
-        <textarea asp-for="Description" placeholder="Öne Çıkan Açıklaması Giriniz" rows="7" class="form-control"></textarea>
-        <br />
-        <button class="btn btn-primary">Öne Çıkan Ekle</button>
-    </form>
+<div class="row">
+    <div class="col-lg-12 d-flex align-items-stretch">
+        <div class="card w-100">
+            <div class="card-body p-4">
+                <div class="d-flex mb-4 justify-content-between align-items-center">
+                    <h5 class="mb-0 fw-bold">Öne Çıkanlar</h5>
+                </div>
+                <form method="post">
+                    <input type="text" asp-for="MainTitle" placeholder="Ana Başlık Giriniz" class="form-control" />
+                    <br />
+                    <input type="text" asp-for="Title" placeholder="Başlık Giriniz" class="form-control" />
+                    <br />
+                    <input type="text" asp-for="VideoUrl" placeholder="Video Url Giriniz" class="form-control" />
+                    <br />
+                    <textarea asp-for="Description" placeholder="Öne Çıkan Açıklaması Giriniz" rows="7" class="form-control"></textarea>
+                    <br />
+                    <button class="btn btn-primary">Öne Çıkan Ekle</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>

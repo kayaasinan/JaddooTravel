@@ -1,0 +1,78 @@
+﻿@model GraficDestinationDto
+
+
+<div class="row">
+    
+    <div class="col-lg-8 d-flex align-items-stretch">
+        <div class="card w-100">
+            <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between mb-1">
+                    <h5 class="card-title fw-semibold">Şehir & Kapasite</h5>
+                </div>
+                <div id="capacityChart"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="row">
+           
+            <div class="col-lg-12 col-sm-6">
+                <div class="card overflow-hidden">
+                    <div class="card-body p-4">
+                        <h5 class="card-title fw-semibold">Şehir & Fiyat Dağılımı</h5>
+                        <div class="d-flex justify-content-center">
+                            <div id="priceChart"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="col-lg-12 col-sm-6">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title fw-semibold">Toplam Ciro</h5>
+                        <h2 class="fw-bold text-success">@Model.TotalRevenue.ToString("C")</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const cities   = JSON.parse('@Html.Raw(JsonSerializer.Serialize(Model.CityCountry))');
+        const capacity = JSON.parse('@Html.Raw(JsonSerializer.Serialize(Model.Capacity))');
+        const prices   = JSON.parse('@Html.Raw(JsonSerializer.Serialize(Model.Price))');
+
+       
+        new ApexCharts(document.querySelector("#capacityChart"), {
+            chart: { type: 'bar', height: 350 },
+            series: [{ name: 'Kapasite', data: capacity }],
+            xaxis: { categories: cities },
+            colors: ['#1E90FF'],
+            plotOptions: { bar: { columnWidth: '40%', borderRadius: 4 } },
+            dataLabels: { enabled: false },
+            legend: { position: 'top' }
+        }).render();
+
+     
+        new ApexCharts(document.querySelector("#priceChart"), {
+            chart: { type: 'donut', height: 250 },
+            series: prices,
+            labels: cities,
+            legend: { show: true, position: 'bottom' },
+            colors: ['#FF7F7F','#28a745','#FFC107','#8E44AD','#16A085','#E67E22']
+        }).render();
+
+            new ApexCharts(document.querySelector("#revenueChart"), {
+        chart: { type: 'area', height: 250 },
+        series: [{ name: 'Ciro', data: monthlyRevenue }],
+        xaxis: { categories: monthLabels }
+    }).render();
+
+    });
+</script>

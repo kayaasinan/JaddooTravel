@@ -1,4 +1,6 @@
-﻿@*
+﻿@using JaddooTravel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<SharedResource> T
+@*
     Default AI Component
 *@
 <section class="pt-6">
@@ -21,29 +23,29 @@
             <div class="row justify-content-center">
                 <div class="col-lg-9 col-md-11">
                     <h2 class="text-dark fw-bold display-6 mb-3">
-                        🌍 Akıllı Şehir Keşif Asistanı
+                        @T["AI_Title"]
                     </h2>
                     <p class="text-secondary fs-5 mb-5">
-                        “Bir şehre yolculuk etmeden önce, <span class="fw-semibold">gezilecek en güzel 10 yeri</span> öğren!”
+                        @T["AI_Slogan"]
                     </p>
 
                     <!-- Form -->
                     <form id="aiForm" class="row g-3 align-items-center w-lg-75 mx-auto bg-white p-4 rounded-4 shadow-sm">
                         <div class="col-sm">
-                            <input class="form-control form-control-lg" type="text" name="country" placeholder="Ülke adı (örn. İtalya)" required />
+                            <input class="form-control form-control-lg" type="text" name="country" placeholder="@(T["AI_InputCountry"])" required />
                         </div>
                         <div class="col-sm">
-                            <input class="form-control form-control-lg" type="text" name="city" placeholder="Şehir adı (örn. Floransa)" required />
+                            <input class="form-control form-control-lg" type="text" name="city" placeholder="@(T["AI_InputCity"])" required />
                         </div>
                         <div class="col-sm-auto">
                             <button id="submitBtn" type="submit" class="btn btn-danger btn-lg px-4 rounded-pill">
-                                🚀 Oluştur
+                                @T["AI_ButtonCreate"]
                             </button>
                         </div>
                     </form>
 
                     <p class="mt-4 text-muted fst-italic small">
-                        *Yapay zeka destekli önerilerle seyahatini kolayca planla.
+                        @T["AI_FooterNote"]
                     </p>
                 </div>
             </div>
@@ -57,13 +59,13 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content p-3">
             <div class="modal-header">
-                <h5 class="modal-title">Gezilecek Yerler</h5>
+                <h5 class="modal-title">@T["AI_ModalTitle"]</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
                 <div id="loadingSpinner" class="text-center d-none">
                     <div class="spinner-border text-primary" role="status"></div>
-                    <p class="mt-2">Yükleniyor...</p>
+                    <p class="mt-2">@T["AI_Loading"]</p>
                 </div>
                 <div id="placesResult"></div>
             </div>

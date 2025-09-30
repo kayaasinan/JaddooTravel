@@ -3,11 +3,11 @@ using JaddooTravel.Services.DestinationServices;
 using JaddooTravel.Services.FeatureServices;
 using JaddooTravel.Services.OpenAIServices;
 using JaddooTravel.Services.ReservationServices;
+using JaddooTravel.Services.SnapshotServices;
 using JaddooTravel.Services.TestimonialServices;
 using JaddooTravel.Services.TripPlanServices;
 using JaddooTravel.Settings;
 using Microsoft.AspNetCore.Localization;
-using Microsoft.CodeAnalysis.Options;
 using Microsoft.Extensions.Options;
 using System.Globalization;
 using System.Reflection;
@@ -20,6 +20,7 @@ builder.Services.AddScoped<IFeatureService, FeatureService>();
 builder.Services.AddScoped<ITripPlanService, TripPlanService>();
 builder.Services.AddScoped<IReservationService, ReservationService>();
 builder.Services.AddScoped<ITestimonialService, TestimonialService>();
+builder.Services.AddScoped<ISnapshotService, SnapshotService>();
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
@@ -37,10 +38,10 @@ builder.Services
     .AddViewLocalization()
     .AddDataAnnotationsLocalization();
 
+
 builder.Services.AddHttpClient<IOpenAIService, OpenAIService>();
 
 var app = builder.Build();
-
 
 if (!app.Environment.IsDevelopment())
 {
@@ -52,11 +53,20 @@ app.UseHttpsRedirection();
 app.UseRouting();
 
 
-var supportedCultures = new[] { "en", "tr", "es", "fr" };
+var supportedCultures = new[]
+{
+    new CultureInfo("tr"),
+    new CultureInfo("en"),
+    new CultureInfo("es"),
+    new CultureInfo("fr")
+};
+
 var localizationOptions = new RequestLocalizationOptions()
-    .SetDefaultCulture("tr")
-    .AddSupportedCultures(supportedCultures)
-    .AddSupportedUICultures(supportedCultures);
+{
+    DefaultRequestCulture = new RequestCulture("tr"),
+    SupportedCultures = supportedCultures,
+    SupportedUICultures = supportedCultures
+};
 
 app.UseRequestLocalization(localizationOptions);
 
